@@ -1,15 +1,36 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Pear</title>
-        <link rel="stylesheet" href="stylesheet.css">
-    </head>
-    <body>
-        <h1 class="title">Hello!Pear!</h1>
-        <p>こんちはなし</p>
-        <img src="Pear.jpg">
-        <p>こんばんはなし</p>
-        <p>ありがとなし</p>
-    </body>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 データ</title>
+</head>
+<body>
+
+<script>
+    var data = {
+        date: 20201010,
+        pcr: 2289688,
+        hospitalize: 5230,
+        positive: 88945,
+        severe: 147,
+        discharge: 81985,
+        death: 1637,
+        symptom_confirming: 57
+    };
+
+    document.write("<h2>COVID-19 データ</h2>");
+    document.write("<p>Date: " + data.date + "</p>");
+    document.write("<p>PCR tests conducted: " + data.pcr + "</p>");
+    document.write("<p>Hospitalized: " + data.hospitalize + "</p>");
+    document.write("<p>Positive cases: " + data.positive + "</p>");
+    document.write("<p>Severe cases: " + data.severe + "</p>");
+    document.write("<p>Discharged: " + data.discharge + "</p>");
+    document.write("<p>Deaths: " + data.death + "</p>");
+    document.write("<p>Symptom-confirming cases: " + data.symptom_confirming + "</p>");
+</script>
+
+</body>
 </html>
+
