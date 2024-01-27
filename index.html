@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COVID-19 データ</title>
+    <title>COVID-19 Data</title>
 </head>
 <body>
 
-<script>
-    var text = `
-{
-    date: 20201010,
-    pcr: 2289688,
-    hospitalize: 5230,
-    positive: 88945,
-    severe: 147,
-    discharge: 81985,
-    death: 1637,
-    symptom_confirming: 57
-}
-`;
+<div id="covidData"></div>
 
-    document.write("<pre>" + text + "</pre>");
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // サーバーからデータを取得する代わりに、与えられたデータを使用
+        var covidData = {
+            date: 20201010,
+            pcr: 2289688,
+            hospitalize: 5230,
+            positive: 88945,
+            severe: 147,
+            discharge: 81985,
+            death: 1637,
+            symptom_confirming: 57
+        };
+
+        // JSON形式に変換して表示
+        var jsonData = JSON.stringify(covidData, null, 2);
+        document.getElementById('covidData').innerHTML = '<pre>' + jsonData + '</pre>';
+    });
 </script>
 
 </body>
