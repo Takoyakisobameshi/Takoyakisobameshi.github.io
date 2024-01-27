@@ -23,9 +23,14 @@
             symptom_confirming: 57
         };
 
-        // JSON形式に変換して表示
-        var jsonData = JSON.stringify(covidData, null, 2);
-        document.getElementById('covidData').innerHTML = '<pre>' + jsonData + '</pre>';
+        // JSON形式に変換
+        var jsonData = JSON.stringify(covidData);
+
+        // Swiftアプリケーションがデータにアクセスできるように、ページ上に表示
+        document.getElementById('covidData').innerText = jsonData;
+
+        // SwiftアプリケーションからアクセスするためにデータをLocalStorageに保存
+        localStorage.setItem('covidData', jsonData);
     });
 </script>
 
