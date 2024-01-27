@@ -7,12 +7,12 @@
 </head>
 <body>
 
-<div id="covidData"></div>
+<div id="CovidInfo"></div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // サーバーからデータを取得する代わりに、与えられたデータを使用
-        var covidData = {
+        var CovidInfo = {
             date: 20201010,
             pcr: 2289688,
             hospitalize: 5230,
@@ -24,13 +24,13 @@
         };
 
         // JSON形式に変換
-        var jsonData = JSON.stringify(covidData);
+        var jsonData = JSON.stringify(CovidInfo);
 
         // Swiftアプリケーションがデータにアクセスできるように、ページ上に表示
-        document.getElementById('covidData').innerText = jsonData;
+        document.getElementById('CovidInfo').innerText = jsonData;
 
         // SwiftアプリケーションからアクセスするためにデータをLocalStorageに保存
-        localStorage.setItem('covidData', jsonData);
+        localStorage.setItem('CovidInfo', jsonData);
     });
 </script>
 
